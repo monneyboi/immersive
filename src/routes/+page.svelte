@@ -6,6 +6,6 @@
 
 <Perspective>
 	<Scene>
-		<Stream xs={6} ys={6} zs={6} />
+		<Stream xs={6} ys={6} zs={3} />
 	</Scene>
 </Perspective>

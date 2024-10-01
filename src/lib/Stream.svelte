@@ -18,8 +18,8 @@
 <div>
 	{#each txs as tx}
 		{#each tys as ty}
-			{#each tzs as tz}
-				<Block {size} {tx} {ty} {tz} />
+			{#each tzs as _}
+				<Block {size} {tx} {ty} />
 			{/each}
 		{/each}
 	{/each}
@@ -27,6 +27,7 @@
 
 <style>
 	div {
+		transform: translate(0);
 		transform-style: preserve-3d;
 	}
 </style>

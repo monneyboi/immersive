@@ -5,7 +5,6 @@
 <style>
 	div {
 		backface-visibility: hidden;
-		perspective: 1000px;
-		perspective-origin: 20% -50%;
+		perspective: 10px;
 	}
 </style>
