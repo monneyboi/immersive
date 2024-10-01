@@ -15,6 +15,10 @@
 </div>
 
 <style>
+	:root {
+		--factor: 1.3;
+	}
+
 	@keyframes move {
 		0% {
 			transform: translate3d(var(--tx), var(--ty), var(--start));
@@ -43,48 +47,48 @@
 		width: var(--size);
 		aspect-ratio: 1;
 
-		background-color: #fff;
 		background-color: hsl(99, 0%, var(--lightness));
+		box-shadow: 0 0 2rem 0 rgba(255, 255, 255, 0.75);
 
 		transform-style: preserve-3d;
 	}
 
 	.face.front {
-		--lightness: 66%;
+		--lightness: calc(66% * var(--factor));
 	}
 
 	.face.bottom {
 		top: 100%;
 		transform-origin: top;
 		transform: rotateX(-90deg);
-		--lightness: 74%;
+		--lightness: calc(74% * var(--factor));
 	}
 
 	.face.top {
 		bottom: 100%;
 		transform-origin: bottom;
 		transform: rotateX(90deg);
-		--lightness: 74%;
+		--lightness: calc(74% * var(--factor));
 	}
 
 	.face.back {
 		bottom: 200%;
 		transform-origin: center calc(var(--size) * 1.5) calc(var(--size) * -0.5);
 		transform: rotateX(180deg);
-		--lightness: 78%;
+		--lightness: calc(78% * var(--factor));
 	}
 
 	.face.right {
 		left: 100%;
 		transform-origin: left;
 		transform: rotateY(90deg);
-		--lightness: 70%;
+		--lightness: calc(70% * var(--factor));
 	}
 
 	.face.left {
 		right: 100%;
 		transform-origin: right;
 		transform: rotateY(-90deg);
-		--lightness: 70%;
+		--lightness: calc(70% * var(--factor));
 	}
 </style>
