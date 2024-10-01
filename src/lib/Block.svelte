@@ -1,11 +1,11 @@
 <script lang="ts">
-	export let size: number = 10;
+	export let size: number = 100;
 	export let tx: number = 0;
 	export let ty: number = 0;
 	export let tz: number = 0;
 </script>
 
-<div class="box" style={`--size:${size}rem;--tx:${tx}rem;--ty:${ty}rem;--tz:${tz}rem;`}>
+<div class="block" style={`--size:${size}px;--tx:${tx}px;--ty:${ty}px;--tz:${tz}px;`}>
 	<div class="face top"></div>
 	<div class="face bottom"></div>
 	<div class="face back"></div>
@@ -15,7 +15,7 @@
 </div>
 
 <style>
-	.box {
+	.block {
 		width: var(--size);
 		aspect-ratio: 1;
 

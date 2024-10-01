@@ -5,14 +5,14 @@
 	export let ys = 10;
 	export let zs = 10;
 
-	const size = 10;
-	const gap = 10;
+	const size = 100;
+	const gap = 100;
 
 	const s = size + gap;
 
-	const txs = Array.from({ length: xs }, (_, x) => x * s - xs * s * 0.5);
-	const tys = Array.from({ length: ys }, (_, y) => y * s - ys * s * 0.5);
-	const tzs = Array.from({ length: zs }, (_, z) => z * s - zs * s * 0.5);
+	const txs = Array.from({ length: xs }, (_, x) => x * s - xs * s * 0.5 + s * 0.5);
+	const tys = Array.from({ length: ys }, (_, y) => y * s - ys * s * 0.5 + s * 0.5);
+	const tzs = Array.from({ length: zs }, (_, z) => z * s - zs * s * 0.5 + s * 0.5);
 </script>
 
 <div>

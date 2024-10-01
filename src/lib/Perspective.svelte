@@ -4,7 +4,8 @@
 
 <style>
 	div {
-		perspective: 30rem;
+		backface-visibility: hidden;
+		perspective: 1000px;
 		perspective-origin: 20% -50%;
 	}
 </style>
