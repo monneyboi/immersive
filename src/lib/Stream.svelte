@@ -1,5 +1,10 @@
 <script lang="ts">
+	import prand from 'pure-rand';
 	import Block from './Block.svelte';
+
+	// Chosen by fair diceroll
+	const seed = 4;
+	const rng = prand.xoroshiro128plus(seed);
 
 	export let xs = 10;
 	export let ys = 10;
@@ -15,19 +20,10 @@
 	const tzs = Array.from({ length: zs }, (_, z) => z * s - zs * s * 0.5 + s * 0.5);
 </script>
 
-<div>
-	{#each txs as tx}
-		{#each tys as ty}
-			{#each tzs as _}
-				<Block {size} {tx} {ty} />
-			{/each}
+{#each txs as tx}
+	{#each tys as ty}
+		{#each tzs as _}
+			<Block {size} {tx} {ty} start={prand.unsafeUniformIntDistribution(-2000, 0, rng)} />
 		{/each}
 	{/each}
-</div>
-
-<style>
-	div {
-		transform: translate(0);
-		transform-style: preserve-3d;
-	}
-</style>
+{/each}

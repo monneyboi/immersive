@@ -2,13 +2,10 @@
 	export let size: number = 100;
 	export let tx: number = 0;
 	export let ty: number = 0;
-	const time = 8000;
+	export let start: number;
 </script>
 
-<div
-	class="block"
-	style={`--size:${size}px;--tx:${tx}px;--ty:${ty}px;--time:${time}ms;--delay:${Math.random() * time * -1}ms;`}
->
+<div class="block" style={`--size:${size}px;--tx:${tx}px;--ty:${ty}px;--start:${start}px`}>
 	<div class="face top"></div>
 	<div class="face bottom"></div>
 	<div class="face back"></div>
@@ -19,11 +16,11 @@
 
 <style>
 	@keyframes move {
-		from {
-			transform: translate3d(var(--tx), var(--ty), -1000px);
+		0% {
+			transform: translate3d(var(--tx), var(--ty), var(--start));
 		}
-		to {
-			transform: translate3d(var(--tx), var(--ty), 1000px);
+		100% {
+			transform: translate3d(var(--tx), var(--ty), calc(var(--start) + 2000px));
 		}
 	}
 
@@ -37,8 +34,8 @@
 		transform-style: preserve-3d;
 		transform-origin: calc(var(--size) * 0.5) bottom calc(var(--size) * -0.5);
 
-		animation: move var(--time) linear infinite;
-		animation-delay: var(--delay);
+		animation: move linear both;
+		animation-timeline: scroll(root block);
 	}
 
 	.face {
