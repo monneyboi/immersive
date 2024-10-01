@@ -1,4 +1,11 @@
-<div class="box">
+<script lang="ts">
+	export let size: number = 10;
+	export let tx: number = 0;
+	export let ty: number = 0;
+	export let tz: number = 0;
+</script>
+
+<div class="box" style={`--size:${size}rem;--tx:${tx}rem;--ty:${ty}rem;--tz:${tz}rem;`}>
 	<div class="face top"></div>
 	<div class="face bottom"></div>
 	<div class="face back"></div>
@@ -8,19 +15,17 @@
 </div>
 
 <style>
-	:root {
-		--size: 10rem;
-	}
-
 	.box {
 		width: var(--size);
 		aspect-ratio: 1;
 
-		position: relative;
+		position: absolute;
+		top: calc(var(--size) * -0.5);
+		left: calc(var(--size) * -0.5);
 		transform-style: preserve-3d;
 		transform-origin: calc(var(--size) * 0.5) bottom calc(var(--size) * -0.5);
 
-		animation: rotate 4s linear infinite;
+		transform: translate3d(var(--tx), var(--ty), var(--tz));
 	}
 
 	.face {
@@ -71,14 +76,5 @@
 		transform-origin: right;
 		transform: rotateY(-90deg);
 		--lightness: 70%;
-	}
-
-	@keyframes rotate {
-		from {
-			transform: rotate(0);
-		}
-		to {
-			transform: rotateY(360deg);
-		}
 	}
 </style>

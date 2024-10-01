@@ -4,8 +4,7 @@
 
 <style>
 	div {
-		position: relative;
-		perspective: 800px;
-		perspective-origin: 50% -200px;
+		perspective: 30rem;
+		perspective-origin: 20% -50%;
 	}
 </style>
