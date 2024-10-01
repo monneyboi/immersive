@@ -6,12 +6,12 @@
 	const seed = 4;
 	const rng = prand.xoroshiro128plus(seed);
 
-	export let xs = 10;
-	export let ys = 10;
-	export let zs = 10;
+	export let xs;
+	export let ys;
+	export let zs;
 
-	const size = 100;
-	const gap = 100;
+	export let size = 100;
+	export let gap = 100;
 
 	const s = size + gap;
 
