@@ -19,15 +19,15 @@
 
 				<p>
 					Johan is an exceptional IT-generalist whose diverse skills and passion make him a valuable
-					collaborator in today's tech landscape. Based in the vibrant city of Utrecht, Johan is a
-					driven individual who embodies both technical prowess and a desire for continuous
-					learning. His career has evolved from frontend development to advanced backend and systems
-					programming, showcasing his adaptability and deep commitment to his craft.
+					collaborator in today's tech landscape. Based in the centre of Europe, Johan is a driven
+					individual who embodies both technical prowess and a desire for continuous learning. His
+					career has evolved from frontend development to advanced backend and systems programming,
+					showcasing his adaptability and deep commitment to his craft.
 				</p>
 
 				<p>
 					Johan's passion for technology started young, and he has since become a master of various
-					programming languages, including JavaScript, Rust, PHP, Python, and more. His approach to
+					programming languages, including JavaScript, Python, Rust, and more. His approach to
 					solving complex IT problems reflects his self-driven, autodidactic nature—he learns fast,
 					adapts well to changing technology landscapes, and continuously seeks improvement. Johan's
 					journey is characterized by his dedication to leveraging data in meaningful ways,
@@ -97,7 +97,7 @@
 			transform: scale(1);
 			opacity: 1;
 		}
-		66% {
+		50% {
 			opacity: 0.33;
 		}
 		100% {
@@ -117,7 +117,7 @@
 
 		animation: noise linear both;
 		animation-timeline: scroll(root block);
-		animation-range: 50vh 350vh;
+		animation-range: 50vh 500vh;
 	}
 
 	.grid {
